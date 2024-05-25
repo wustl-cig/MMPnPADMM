@@ -8,7 +8,7 @@ Plug-and-Play (PnP) priors is a widely-used family of methods for solving imagin
 
 ----------
 ## How to Run the Code
-----------
+
 Download the pretrained models 
 
 pip install gdown 
