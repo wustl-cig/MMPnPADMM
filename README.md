@@ -12,11 +12,11 @@ powerful deep denoisers. Despite extensive work on PnP, the topic of
 <em>distribution mismatch</em> between the training and testing data has often
 been overlooked in the PnP literature. This paper presents a set of new theoretical
 and numerical results on the topic of prior distribution mismatch and domain 
-adaptation for \emph{alternating direction method of multipliers (ADMM)} variant 
+adaptation for *alternating direction method of multipliers (ADMM)* variant 
 of PnP. Our theoretical result provides an explicit error bound for PnP-ADMM due 
 to the mismatch between the desired denoiser and the one used for inference. 
 Our analysis contributes to the work in the area by considering the mismatch under 
-\emph{nonconvex} data-fidelity terms and \emph{expansive} denoisers.
+*nonconvex* data-fidelity terms and *expansive* denoisers.
 Our first set of numerical results quantifies the impact of the prior distribution 
 mismatch on the performance of PnP-ADMM on the problem of image super-resolution.
 Our second set of numerical results considers a simple and effective domain adaption
@@ -27,19 +27,25 @@ reduced with few training samples from the desired distribution.
 
 ----------
 * How to Run the Code
+----------
+Download the pretrained models 
 
 pip install gdown 
+
 gdown --folder https://drive.google.com/drive/folders/1kHUPl6vFMmHZwSgEwi9Swz7QOHRF-mqz
 
-Please download the model_zoo folder to use the pre-trained models. 
+-------- 
 Select the model_path from the following options: 
  1. "./model_zoo/BreCahad_Metfaces_models/mismatch/*.pth"
  2. "./model_zoo/BreCahad_Metfaces_models/updated/*.pth"
  3. "./model_zoo/CelebA_RxRx1_models/mismatch/*.pth"
  4. "./model_zoo/CelebA_RxRx1_models/updated/*.pth"
 
+--------
 Set the reqiured variables (retrieve image or table, scaling factor, sample name). 
 
-Run main_PnPADMM_sisr.py 
+--------
+python main_PnPADMM_sisr.py 
 
+-------
 The results will be saved in the "results" folder. 
